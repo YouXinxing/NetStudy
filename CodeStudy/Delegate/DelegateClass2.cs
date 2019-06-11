@@ -18,7 +18,7 @@ namespace CodeStudy
             //创建委托实例
             apple.AssembleIphone = new Apple.AssembleIphoneHandler(foxconn.AssembleIphone);
             //apple.AssembleIphone += new Apple.AssembleIphoneHandler(foxconn.PackIphone);
-            apple.AssembleIphone = (Apple.AssembleIphoneHandler)Delegate.Combine(apple.AssembleIphone, new Apple.AssembleIphoneHandler(foxconn.PackIphone));
+            apple.AssembleIphone = (Apple.AssembleIphoneHandler)System.Delegate.Combine(apple.AssembleIphone, new Apple.AssembleIphoneHandler(foxconn.PackIphone));
             apple.AssembleIphone += new Apple.AssembleIphoneHandler(foxconn.ShipIphone);
 
             apple.DesignIphone();

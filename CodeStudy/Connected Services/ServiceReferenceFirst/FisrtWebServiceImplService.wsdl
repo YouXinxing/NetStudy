@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.webxml.felink.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="FisrtWebServiceImplService" targetNamespace="http://ws.webxml.felink.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8380/getAddress?xsd=1" namespace="http://ws.webxml.felink.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getAddressByPhoneNo">
+    <part name="parameters" element="tns:getAddressByPhoneNo" />
+  </message>
+  <message name="getAddressByPhoneNoResponse">
+    <part name="parameters" element="tns:getAddressByPhoneNoResponse" />
+  </message>
+  <portType name="FisrtWebServiceImpl">
+    <operation name="getAddressByPhoneNo">
+      <input wsam:Action="http://ws.webxml.felink.com/FisrtWebServiceImpl/getAddressByPhoneNoRequest" message="tns:getAddressByPhoneNo" />
+      <output wsam:Action="http://ws.webxml.felink.com/FisrtWebServiceImpl/getAddressByPhoneNoResponse" message="tns:getAddressByPhoneNoResponse" />
+    </operation>
+  </portType>
+  <binding name="FisrtWebServiceImplPortBinding" type="tns:FisrtWebServiceImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAddressByPhoneNo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="FisrtWebServiceImplService">
+    <port name="FisrtWebServiceImplPort" binding="tns:FisrtWebServiceImplPortBinding">
+      <soap:address location="http://localhost:8380/getAddress" />
+    </port>
+  </service>
+</definitions>

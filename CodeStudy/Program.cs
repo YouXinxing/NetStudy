@@ -1,8 +1,13 @@
-﻿using CodeStudy.DependencyInjection;
+﻿using CodeStudy.AttributeHelper;
+using CodeStudy.DependencyInjection;
 using CodeStudy.DependencyLocate;
+using CodeStudy.Img;
 using CodeStudy.Json;
 using CodeStudy.Product;
+using CodeStudy.ServiceReference;
+using CodeStudy.SimpleEvent;
 using CodeStudy.Tasks;
+using CodeStudy.Threads;
 using CodeStudy.Unity;
 using NamespaceRef;
 using Ninject;
@@ -18,7 +23,7 @@ namespace CodeStudy
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             //DelegateClass model = new DelegateClass();
@@ -85,13 +90,25 @@ namespace CodeStudy
             //var item = new CmdConsole();
 
 
-            TimeClass s = new TimeClass();
-            Console.Read();
+            //    TimeClass s = new TimeClass();
+            //ParameterizeThreadStartThread.Main2();
+            //TimerCallbackThread.Main2();
+            //QueueUserWorkItemThread.Main3();
+            //QueueUserWorkItemThread2.Main2();
 
+            //IAsyncResultThread.Main2();
+            //IAsyncResultThread4.Main2();
+            //new ServiceReferenceFirstDemo();
 
+            //new ConsoleTask();
 
+            //new ConsoleEventTask();
 
+            //LocSelfkHelper.Main3();
+            //ImgDraw.ChangeImgTest();
+            //Console.Read();
 
+            TiffDraw.GetImgTest();
         }
     }
 }

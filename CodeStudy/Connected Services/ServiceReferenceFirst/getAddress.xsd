@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.webxml.felink.com/" targetNamespace="http://ws.webxml.felink.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getAddressByPhoneNo" type="tns:getAddressByPhoneNo" />
+  <xs:element name="getAddressByPhoneNoResponse" type="tns:getAddressByPhoneNoResponse" />
+  <xs:complexType name="getAddressByPhoneNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAddressByPhoneNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

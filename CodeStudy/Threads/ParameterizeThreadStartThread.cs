@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,11 @@ namespace CodeStudy.Threads
         public string Name { get; set; }
         public int Age { get; set; }
     }
-
-    class ParameterizeThreadStartThread
+   
+    public class ParameterizeThreadStartThread
     {
-        static void Main(string[] args)
+
+        public static void Main2()
         {
             //整数作为参数
             for (int i = 0; i < 2; i++)
